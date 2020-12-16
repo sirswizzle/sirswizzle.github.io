@@ -711,6 +711,13 @@ a {
 .cid-siawGyYxma .bg-twitter:hover {
   background: #0c85d0;
 }
+.cid-siawGyYxma .bg-instagram {
+  background: #f00075;
+  color: #ffffff;
+}
+.cid-siawGyYxma .bg-instagram:hover {
+  background: #bd005c;
+}
 .cid-siawGyYxma .bg-slack {
   background: #4a154b;
   color: #ffffff;

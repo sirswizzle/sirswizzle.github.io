@@ -136,8 +136,28 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-12 col-md-10 video-block">
-                <div class="video-wrapper"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/1yGD3i_onqA?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-                
+                <div class="video-wrapper">
+                    <iframe class="latestVideoEmbed" vnum='0' cid="UCD1serzIvIvobv-ta0r4Jug" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                    <script>
+                    var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+                    function loadVideo(iframe) {
+                    $.getJSON(reqURL + iframe.getAttribute('cid'),
+                        function(data) {
+                        var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                        console.log(videoNumber);
+                        var link = data.items[videoNumber].link;
+                        id = link.substr(link.indexOf("=") + 1);
+                        iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=1&autoplay=0");
+                        }
+                    );
+                    }
+                    var iframes = document.getElementsByClassName('latestVideoEmbed');
+                    for (var i = 0, len = iframes.length; i < len; i++) {
+                    loadVideo(iframes[i]);
+                    }
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -151,7 +171,15 @@
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
-            
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-4"><p><a href="/takedown" class="text-primary"></a><a href="/takedown" class="text-white">Takedown Request</a></p></li></ul>
+            </div>
             <div class="row social-row">
                 <div class="social-list align-right pb-2">
                     
@@ -185,7 +213,7 @@
             </div>
         </div>
     </div>
-</section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>  
+</section><script src="assets/web/assets/jquery/jquery.min.js"></script>  <script src="assets/popper/popper.min.js"></script>  <script src="assets/tether/tether.min.js"></script>  <script src="assets/bootstrap/js/bootstrap.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/playervimeo/vimeo_player.js"></script>  <script src="assets/dropdown/js/nav-dropdown.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script> 
   
   
 </body>

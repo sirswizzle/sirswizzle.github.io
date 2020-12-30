@@ -3,13 +3,6 @@
 
 
 
-@media (min-width: 768px){
-#footer3-10 {
-	bottom:0!important;
-	position:absolute;
-	width:100%
-	}
-}
 
 body {
   font-family: IBM Plex Sans;
@@ -562,12 +555,6 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):hover {
 .alert-danger {
   background-color: #ff9966;
 }
-.mbr-section-btn a.btn:not(.btn-form) {
-  border-radius: 100px;
-}
-.mbr-gallery-filter li a {
-  border-radius: 100px !important;
-}
 .mbr-gallery-filter li.active .btn {
   background-color: #22a5e5;
   border-color: #22a5e5;
@@ -575,9 +562,6 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):hover {
 }
 .mbr-gallery-filter li.active .btn:focus {
   box-shadow: none;
-}
-.nav-tabs .nav-link {
-  border-radius: 100px !important;
 }
 a,
 a:hover {
@@ -634,19 +618,6 @@ blockquote {
   border-color: #22a5e5;
 }
 /* Forms */
-.mbr-form .input-group-btn a.btn {
-  border-radius: 100px !important;
-}
-.mbr-form .input-group-btn a.btn:hover {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
-}
-.mbr-form .input-group-btn button[type="submit"] {
-  border-radius: 100px !important;
-  padding: 1rem 3rem;
-}
-.mbr-form .input-group-btn button[type="submit"]:hover {
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
-}
 .jq-selectbox li:hover,
 .jq-selectbox li.selected {
   background-color: #22a5e5;
@@ -1244,7 +1215,7 @@ a {
 }
 .cid-skwjVcqsaw {
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 10rem;
   background-color: #ffffff;
 }
 .cid-skwjVcqsaw .mbr-section-title {
